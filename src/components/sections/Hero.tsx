@@ -1,6 +1,7 @@
 import { HeroProps } from "./Hero.types";
 import { Badge } from "../ui/Badge";
-import { Github, Linkedin, MapPin } from 'lucide-react';
+import { MapPin, ExternalLink } from 'lucide-react';
+import { SiGithub, SiLinkedin } from 'react-icons/si';
 
 export function Hero({ profile }: HeroProps) {
   return (
@@ -38,7 +39,6 @@ export function Hero({ profile }: HeroProps) {
           {profile.socialLinks.map((link) => {
             const isGithub = link.platform.toLowerCase() === 'github';
             const isLinkedin = link.platform.toLowerCase() === 'linkedin';
-            const Icon = isGithub ? Github : isLinkedin ? Linkedin : null;
 
             return (
               <a
@@ -46,10 +46,12 @@ export function Hero({ profile }: HeroProps) {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-3 py-1.5 bg-zinc-900 border border-zinc-800 rounded-lg text-sm text-zinc-300 hover:text-white hover:border-zinc-700 transition-colors"
+                className="flex items-center gap-2.5 px-3.5 py-2 bg-zinc-900 border border-zinc-800 rounded-lg text-sm text-zinc-300 hover:text-white hover:border-zinc-700 transition-colors"
               >
-                {Icon && <Icon className="w-4 h-4 text-zinc-400" />}
+                {isGithub && <SiGithub className="w-4 h-4 text-zinc-300" />}
+                {isLinkedin && <SiLinkedin className="w-4 h-4 text-sky-400" />}
                 <span>{link.platform}</span>
+                <ExternalLink className="w-3.5 h-3.5 text-zinc-500 ml-0.5" />
               </a>
             )
           })}
