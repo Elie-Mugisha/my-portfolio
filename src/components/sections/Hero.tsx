@@ -1,7 +1,7 @@
 import { HeroProps } from "./Hero.types";
 import { Badge } from "../ui/Badge";
 import { MapPin, ExternalLink } from 'lucide-react';
-import { SiGithub, SiLinkedin } from 'react-icons/si';
+import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 export function Hero({ profile }: HeroProps) {
   return (
@@ -48,8 +48,8 @@ export function Hero({ profile }: HeroProps) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 px-3.5 py-2 bg-zinc-900 border border-zinc-800 rounded-lg text-sm text-zinc-300 hover:text-white hover:border-zinc-700 transition-colors"
               >
-                {isGithub && <SiGithub className="w-4 h-4 text-zinc-300" />}
-                {isLinkedin && <SiLinkedin className="w-4 h-4 text-sky-400" />}
+                {isGithub && <FaGithub className="w-4 h-4 text-zinc-300" />}
+                {isLinkedin && <FaLinkedin className="w-4 h-4 text-sky-400" />}
                 <span>{link.platform}</span>
                 <ExternalLink className="w-3.5 h-3.5 text-zinc-500 ml-0.5" />
               </a>
