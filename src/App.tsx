@@ -6,7 +6,7 @@ import { ProjectsSection } from "./components/sections/ProjectsSection";
 import { ExperienceTimeline } from "./components/sections/ExperienceTimeline";
 import { ContactSection } from "./components/sections/ContactSection";
 
-export function App() {
+export default function App() {
   const { profile, skills, projects, timeline, now } = portfolioData;
 
   return (

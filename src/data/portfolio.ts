@@ -46,7 +46,6 @@ export const portfolioData: PortfolioData = {
       description: "A production-oriented backend API built with NestJS and SQL to manage car sharing workflows, user bookings, and vehicle availability.",
       techStack: ["NestJS", "Node.js", "TypeScript", "SQL"],
       status: "active-development",
-      githubUrl: "https://github.com/TheGymRwanda/ulk-code-warriors-carsharing-backend",
       isFeatured: true
     },
     {

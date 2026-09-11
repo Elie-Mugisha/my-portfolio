@@ -61,7 +61,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
                     title={link.platform}
                   >
                     {isGithub && <FaGithub className="w-5 h-5" />}
-                    {isLinkedin && <FaGithub className="w-5 h-5 text-sky-400" />}
+                    {isLinkedin && <FaLinkedin className="w-5 h-5 text-sky-400" />}
                   </a>
                 )
               })}
