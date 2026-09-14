@@ -17,9 +17,9 @@ export function Navbar({ name }: NavbarProps) {
           <div className="p-1.5 bg-zinc-900 border border-zinc-800 rounded-lg text-sky-400 group-hover:border-sky-500/50 transition-colors">
             <Code2 className="w-4 h-4" />
           </div>
-          <span className="text-sm font-semibold text-white tracking-tight group-hover:text-sky-400 transition-colors">
+          {/*<span className="text-sm font-semibold text-white tracking-tight group-hover:text-sky-400 transition-colors">
             {name}
-          </span>
+          </span>*/}
         </a>
 
         <nav className="flex items-center gap-1 sm:gap-2">
