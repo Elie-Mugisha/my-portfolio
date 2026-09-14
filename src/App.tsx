@@ -1,12 +1,12 @@
-import { portfolioData } from "./data/portfolio";
-import { Hero } from "./components/sections/Hero";
-import { NowWidget } from "./components/sections/NowWidget";
-import { SkillsSection } from "./components/sections/SkillsSection";
-import { ProjectsSection } from "./components/sections/ProjectsSection";
-import { ExperienceTimeline } from "./components/sections/ExperienceTimeline";
-import { ContactSection } from "./components/sections/ContactSection";
+import { portfolioData } from "@/data/portfolio";
+import { Hero } from "@/components/sections/Hero";
+import { NowWidget } from "@/components/sections/NowWidget";
+import { SkillsSection } from "@/components/sections/SkillsSection";
+import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { ExperienceTimeline } from "@/components/sections/ExperienceTimeline";
+import { ContactSection } from "@/components/sections/ContactSection";
 
-export default function App() {
+export function App() {
   const { profile, skills, projects, timeline, now } = portfolioData;
 
   return (
