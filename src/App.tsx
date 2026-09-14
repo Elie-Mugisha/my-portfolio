@@ -1,4 +1,5 @@
 import { portfolioData } from "@/data/portfolio";
+import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { NowWidget } from "@/components/sections/NowWidget";
 import { SkillsSection } from "@/components/sections/SkillsSection";
@@ -11,6 +12,8 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 selection:bg-zinc-800 selection:text-zinc-100">
+      <Navbar name={profile.name} />
+      
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 pb-16">
         <Hero profile={profile} />
         <NowWidget items={now} />
