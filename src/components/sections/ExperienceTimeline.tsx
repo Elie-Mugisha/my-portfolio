@@ -17,7 +17,7 @@ export function ExperienceTimeline({ events }: ExperienceTimelineProps) {
 
   return (
     <section className="py-8 border-b border-zinc-200 dark:border-zinc-800/80">
-      <div className="flex items-center justify-beween mb-8">
+      <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-2">
           <Briefcase className="w-5 h-5 text-sky-600 dark:text-sky-400" />
           <h2 className="text-xl font-bold text-zinc-950 dark:text-white tracking-light">Timeline & Education</h2>
