@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 export function Hero({ profile }: HeroProps) {
   return (
-    <section className="py-12 border-b border-zinc-800/80">
+    <section className="py-12 border-b border-zinc-200 dark:border-zinc-800/80 transition-colors">
       <div className="flex flex-col gap-6">
 
         {/* Availability Status Badge */}
@@ -19,13 +19,13 @@ export function Hero({ profile }: HeroProps) {
 
         {/*Name & Title*/}
         <div className="space-y-2">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-950 dark:text-white">
             {profile.name}
           </h1>
-          <p className="text-xl text-sky-400 font-medium flex items-center gap-2">
+          <p className="text-xl text-sky-600 dark:text-sky-400 font-medium flex items-center gap-2">
             {profile.title}
-            <span className="text-zinc-600">•</span>
-            <span className="text-sm text-zinc-400 font-normal flex items-center gap-1">
+            <span className="text-zinc-400 dark:text-zinc-600">•</span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400 font-normal flex items-center gap-1">
               <MapPin className="w-3.5 h-3.5" />
               {profile.location}
             </span>
@@ -33,7 +33,7 @@ export function Hero({ profile }: HeroProps) {
         </div>
 
         {/* Tagline */}
-        <p className="text-zinc-300 max-w-2xl text-base leading-relaxed">{profile.tagline}</p>
+        <p className="text-zinc-700 dark:text-zinc-300 max-w-2xl text-base leading-relaxed">{profile.tagline}</p>
 
         <div className="flex items-center gap-4 pt-2">
           {profile.socialLinks.map((link) => {
@@ -46,12 +46,12 @@ export function Hero({ profile }: HeroProps) {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 px-3.5 py-2 bg-zinc-900 border border-zinc-800 rounded-lg text-sm text-zinc-300 hover:text-white hover:border-zinc-700 transition-colors"
+                className="flex items-center gap-2.5 px-3.5 py-2 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors"
               >
-                {isGithub && <FaGithub className="w-4 h-4 text-zinc-300" />}
-                {isLinkedin && <FaLinkedin className="w-4 h-4 text-sky-400" />}
+                {isGithub && <FaGithub className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />}
+                {isLinkedin && <FaLinkedin className="w-4 h-4 text-sky-600 dark:text-sky-400" />}
                 <span>{link.platform}</span>
-                <ExternalLink className="w-3.5 h-3.5 text-zinc-500 ml-0.5" />
+                <ExternalLink className="w-3.5 h-3.5 text-zinc-400 dark:text-zinc-500 ml-0.5" />
               </a>
             )
           })}

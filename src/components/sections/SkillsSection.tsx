@@ -13,10 +13,10 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
   ];
 
   return (
-    <section className="py-8 border-b border-zinc-800/80">
+    <section className="py-8 border-b border-zinc-200 dark:border-zinc-800/80 transition-colors">
       <div className="flex items-center gap-2 mb-6">
-        <Cpu className="w-5 h-5 text-sky-400" />
-        <h2 className="text-xl font-bold text-white tracking-light">Technical Skills</h2>
+        <Cpu className="w-5 h-5 text-sky-600 dark:text-sky-400" />
+        <h2 className="text-xl font-bold text-zinc-950 dark:text-white tracking-light">Technical Skills</h2>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -26,9 +26,9 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
 
           return (
             <Card key={key} className="space-y-4">
-              <div className="flex items-center gap-2 pb-2 border-b border-zinc-800/60">
-                <Icon className="w-4 h-4 text-sky-400" />
-                <h3 className="text-sm font-semibold text-zinc-200 uppercase tracking-wider">{label}</h3>
+              <div className="flex items-center gap-2 pb-2 border-b broder-zinc-200/80 dark:border-zinc-800/60">
+                <Icon className="w-4 h-4 text-sky-600 dark:text-sky-400" />
+                <h3 className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 uppercase tracking-wider">{label}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -36,7 +36,7 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
                   <Badge key={skill.id} variant={skill.level === 'active' ? 'default' : 'learning'}>
                     {skill.name}
                     {skill.level === 'learning' && (
-                      <span className="ml-1 text-[10px] text-sky-400 font-normal">(Learning)</span>
+                      <span className="ml-1 text-[10px] text-sky-600 dark:text-sky-400 font-normal">(Learning)</span>
                     )}
                   </Badge>
                 ))}

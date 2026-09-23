@@ -19,16 +19,16 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
   };
 
   return (
-    <section className="py-8 border-b border-zinc-800/80">
+    <section className="py-8 border-b border-zinc-200 dark:border-zinc-800/80 transition-colors">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2">
-          <FolderGit2 className="w-5 h-5 text-sky-400" />
+          <FolderGit2 className="w-5 h-5 text-sky-600 dark:text-sky-400" />
           <h2 className="text-xl font-bold text-white tracking-light">Projects</h2>
         </div>
 
         <Link
           to="/projects"
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 hover:text-sky-300 transition-colors group"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 dark:text-sky-400 hover:text-sky-500 dark:hover:text-sky-300 transition-colors group"
         >
           <span>View Full Archive</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -40,28 +40,28 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
           <Card key={project.id} className="flex flex-col justify-between space-y-6">
             <div className="space-y-3">
               <div className="flex items-start justify-between gap-2">
-                <h3 className="text-lg font-semibold text-white tracking-tight">{project.title}</h3>
+                <h3 className="text-lg font-semibold text-zinc-950 dark:text-white tracking-tight">{project.title}</h3>
                 {getStatusBadge(project.status)}
               </div>
 
-              <p className="text-sm text-zinc-300 leading-relaxed">
+              <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
                 {project.summary}
               </p>
 
               <div className="flex flex-wrap gap-1.5 pt-2">
                 {project.techStack.map(tech => (
-                  <span key={tech} className="px-2 py-0.5 bg-zinc-800/60 border border-zinc-700/50 rounded text-xs text-zinc-300 font-mono">{tech}</span>
+                  <span key={tech} className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700/50 rounded text-xs text-zinc-700 dark:text-zinc-300 font-mono">{tech}</span>
                 ))}
               </div>
             </div>
 
             {project.githubUrl && (
-              <div className="pt-4 border-t border-zinc-800/60 flex items-center">
+              <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800/60 flex items-center">
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-medium text-sky-400 hover:text-sky-300 transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-medium text-sky-600 dark:text-sky-400 hover:text-sky-500 dark:hover:text-sky-300 transition-colors"
                 >
                   <FaGithub className="w-4 h-4" />
                   <span>View source Repository</span>

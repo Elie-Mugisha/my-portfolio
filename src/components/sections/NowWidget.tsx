@@ -18,11 +18,11 @@ export function NowWidget({ items }: NowWidgetProps) {
   };
 
   return (
-    <section className="py-8 border-b border-zinc-800/80">
+    <section className="py-8 border-b border-zinc-200 dark:border-zinc-800/80 transition-colors">
       <div className="flex items-center gap-2 mb-6">
-        <Clock className="w-5 h-5 text-sky-400" />
-        <h2 className="text-xl font-bold text-white tracking-tight">What I'm Doing Now</h2>
-        <span className="text-xs text-zinc-500 font-mono ml-auto">Updated Sep 2026</span>
+        <Clock className="w-5 h-5 text-sky-600 dark:text-sky-400" />
+        <h2 className="text-xl font-bold text-zinc-950 dark:text-white tracking-tight">What I'm Doing Now</h2>
+        <span className="text-xs text-zinc-500 dark:text-zinc-500 font-mono ml-auto">Updated Sep 2026</span>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
@@ -34,9 +34,9 @@ export function NowWidget({ items }: NowWidgetProps) {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <Badge variant={variant}>{label}</Badge>
-                  <Icon className="w-4 h-4 text-zinc-300" />
+                  <Icon className="w-4 h-4 text-zinc-400 dark:text-zinc-500" />
                 </div>
-                <p className="text-sm text-zinc-300 leading-relaxed">
+                <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
                   {item.content}
                 </p>
               </div>
