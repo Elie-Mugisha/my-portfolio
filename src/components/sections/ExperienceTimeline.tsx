@@ -1,5 +1,6 @@
 import { ExperienceTimelineProps } from "./ExperienceTimeline.types";
-import { Briefcase, GraduationCap, Flag, Calendar } from "lucide-react";
+import { Briefcase, GraduationCap, Flag, Calendar, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function ExperienceTimeline({ events }: ExperienceTimelineProps) {
   const getEventIcon = (type: string) => {
@@ -16,9 +17,19 @@ export function ExperienceTimeline({ events }: ExperienceTimelineProps) {
 
   return (
     <section className="py-8 border-b border-zinc-800/80">
-      <div className="flex items-center gap-2 mb-8">
-        <Briefcase className="w-5 h-5 text-sky-400" />
-        <h2 className="text-xl font-bold text-white tracking-light">Timeline & Education</h2>
+      <div className="flex items-center justify-beween mb-8">
+        <div className="flex items-center gap-2">
+          <Briefcase className="w-5 h-5 text-sky-400" />
+          <h2 className="text-xl font-bold text-white tracking-light">Timeline & Education</h2>
+        </div>
+
+        <Link
+          to="/timeline"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-400 hover:text-sky-300 transition-colors group"
+        >
+          <span>Explore Timeline</span>
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+        </Link>
       </div>
 
       <div className="relative pl-6 space-y-8 before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-zinc-800">
