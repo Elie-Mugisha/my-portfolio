@@ -25,7 +25,7 @@ export function ProjectsPage({ projects }: ProjectsPageProps) {
           to="/"
           className="inline-flex items-center gap-2 text-xs font-semibold text-zinc-400 hover:text-white transition-colors group"
         >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+          <ArrowLeft className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           <span>Back to Portfolio Overview</span>
         </Link>
 
