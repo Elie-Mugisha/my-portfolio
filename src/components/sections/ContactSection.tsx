@@ -21,7 +21,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
 
         <div className="grid gap-4 sm:grid-cols-2 pt-2">
           <a href="mailto:iradukunda2k26@gmail.com"
-            className="flex items-center gap-3 p-4 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-sky-500/50 transition-all group"
+            className="flex items-center gap-3 p-4 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-sky-500/50 transition-all group"
           >
             <div className="p-2.5 bg-sky-100 dark:bg-sky-950/60 border border-sky-200 dark:border-sky-800/60 rounded-lg text-sky-600 dark:text-sky-400 group-hover:scale-105 transition-transform">
               <Mail className="w-5 h-5" />
@@ -35,7 +35,7 @@ export function ContactSection({ profile }: ContactSectionProps) {
             <Send className="w-4 h-4 text-zinc-400 dark:text-zinc-500 ml-auto group-hover:translate-x-0.5 transition-transform" />
           </a>
 
-          <div className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg">
+          <div className="flex items-center justify-between p-4 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg">
             <div className="flex items-center gap-3">
               <div className="p-2.5 bg-zinc-200/80 dark:bg-zinc-800/80 border border-zinc-300/60 dark:border-zinc-700/60 rounded-lg text-zinc-700 dark:text-zinc-300">
                 <MapPin className="w-5 h-5" />
