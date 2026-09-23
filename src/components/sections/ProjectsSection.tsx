@@ -23,7 +23,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2">
           <FolderGit2 className="w-5 h-5 text-sky-600 dark:text-sky-400" />
-          <h2 className="text-xl font-bold text-white tracking-light">Projects</h2>
+          <h2 className="text-xl font-bold text-zinc-900 dark:text-white tracking-light">Projects</h2>
         </div>
 
         <Link
