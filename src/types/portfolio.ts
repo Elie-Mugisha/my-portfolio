@@ -61,3 +61,11 @@ export interface Profile {
     url: string;
   }[];
 }
+
+export interface PortfolioData {
+  profile: Profile;
+  skills: Skill[];
+  projects: Project[];
+  timeline: TimelineEvent[];
+  now: NowItem[];
+}

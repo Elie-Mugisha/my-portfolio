@@ -1,12 +1,4 @@
-import { Profile, Skill, Project, TimelineEvent, NowItem } from "../types/portfolio";
-
-export interface PortfolioData {
-  profile: Profile;
-  skills: Skill[];
-  projects: Project[];
-  timeline: TimelineEvent[];
-  now: NowItem[];
-}
+import { PortfolioData } from "../types/portfolio";
 
 export const portfolioData: PortfolioData = {
   profile: {
